@@ -1,0 +1,170 @@
+/* Deep Luxurious Dark Room Theme for the Contact Viewport Area */
+.contact-viewport-dark {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 8%;
+  background-color: #120F0D; 
+  overflow: hidden;
+}
+
+/* Background Soft Glow Effect Node Layer */
+.contact-ambient-neon-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(230, 184, 138, 0.09) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* HIGH-END GLOWING MEGA CARD ARCHITECTURE - UPGRADED TO BE WIDER & LARGER */
+.contact-premium-card-glowing {
+  position: relative;
+  background: linear-gradient(145deg, #1C1715, #14100E); 
+  padding: 90px 80px; /* 👈 Padding barha di taake bada lage box */
+  border-radius: 40px;
+  max-width: 950px; /* 👈 Size upgraded to 950px for a massive look! */
+  width: 100%;
+  z-index: 2;
+  
+  border: 1px solid rgba(230, 184, 138, 0.18);
+  box-shadow: 0 50px 110px rgba(0, 0, 0, 0.7), 
+              0 0 60px rgba(230, 184, 138, 0.08);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contact-premium-card-glowing:hover {
+  transform: translateY(-5px);
+  border-color: rgba(230, 184, 138, 0.4);
+  box-shadow: 0 55px 120px rgba(0, 0, 0, 0.8), 
+              0 0 70px rgba(230, 184, 138, 0.18);
+}
+
+.contact-tag-gold {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--accent-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(230, 184, 138, 0.25);
+}
+
+.contact-main-title-luxury {
+  font-family: var(--font-serif);
+  font-size: 4rem; /* 👈 Title size expanded */
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.contact-glowing-gold-line {
+  width: 80px;
+  height: 2.5px;
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 12px var(--accent-gold);
+  margin: 20px auto 40px auto;
+}
+
+.contact-description-pro {
+  font-size: 19px; /* 👈 Description parhne mein asani ke liye badi kar di */
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 50px;
+}
+
+/* Dynamic Centered Info Row Layout */
+.contact-details-grid-premium {
+  display: flex;
+  justify-content: center;
+  gap: 70px; /* 👈 Info items ke beech ka gap barha diya */
+  margin-bottom: 55px;
+  flex-wrap: wrap;
+}
+
+.contact-detail-item-luxury {
+  font-size: 18px; /* 👈 Detail text also upgraded */
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  letter-spacing: 0.5px;
+}
+
+.icon-span-glow {
+  font-size: 26px;
+  filter: drop-shadow(0 0 6px rgba(230, 184, 138, 0.4));
+}
+
+/* WHATSAPP SUBMIT BUTTON ELEMENT */
+.contact-wa-submit-btn-glow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  background-color: var(--whatsapp-green);
+  padding: 18px 55px; /* 👈 Button also made bold & wide */
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.35);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  cursor: pointer;
+}
+
+.contact-wa-submit-btn-glow span {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.contact-wa-submit-btn-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.55);
+  background-color: #20ba59;
+}
+
+/* Responsive configurations for mobile layouts */
+@media (max-width: 968px) {
+  .contact-premium-card-glowing {
+    padding: 60px 40px;
+  }
+  
+  .contact-main-title-luxury {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-premium-card-glowing {
+    padding: 50px 24px;
+  }
+  
+  .contact-main-title-luxury {
+    font-size: 2.4rem;
+  }
+  
+  .contact-description-pro {
+    font-size: 16px;
+  }
+
+  .contact-details-grid-premium {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .contact-wa-submit-btn-glow {
+    width: 100%;
+  }
+}

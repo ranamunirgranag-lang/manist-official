@@ -1,0 +1,191 @@
+.hero-viewport {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 8% 40px 8%;
+  background-color: var(--bg-cream);
+  overflow: hidden;
+}
+
+/* Background Glowing Aesthetic Effects (Glow Circles) */
+.hero-viewport::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(230, 184, 138, 0.15) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-viewport::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(156, 102, 68, 0.2) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
+  z-index: 1;
+}
+
+.hero-left-text {
+  flex: 1.2;
+  max-width: 650px;
+}
+
+.hero-mini-tag {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+  text-shadow: 0 0 10px rgba(230, 184, 138, 0.3);
+}
+
+.hero-main-title {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero-main-title span {
+  color: var(--accent-gold);
+  text-shadow: 0 0 20px rgba(230, 184, 138, 0.4);
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--whatsapp-green);
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  gap: 12px;
+  font-size: 16px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-cta-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+  background-color: #20ba59;
+}
+
+.hero-right-display {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* 3D GLOWING FRAME - Fixed & Shifting position */
+.hero-image-backdrop {
+  position: absolute;
+  top: 25px;       
+  left: 25px;      
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  background: transparent; 
+  border: 2px solid var(--accent-gold); 
+  border-radius: 28px;
+  z-index: 1;
+  box-shadow: 0 0 25px rgba(230, 184, 138, 0.25);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Core Assets (Image / Video Unified Design) */
+.hero-showcase-image, .hero-showcase-video {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  object-fit: cover; 
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- INTERACTIVE 3D SHIFT HOVER SYSTEM --- */
+/* Hover hote hi video left-up aur back frame right-down ho kar spacing complete karega */
+.hero-right-display:hover .hero-showcase-video,
+.hero-right-display:hover .hero-showcase-image {
+  transform: scale(1.02) translate(-8px, -8px);
+  border-color: rgba(230, 184, 138, 0.45);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+.hero-right-display:hover .hero-image-backdrop {
+  transform: translate(8px, 8px);
+  border-color: #ffffff;
+  box-shadow: 0 0 35px rgba(230, 184, 138, 0.5);
+}
+
+/* Responsiveness for Smaller Screen (Tablets & Mobile) */
+@media (max-width: 968px) {
+  .hero-viewport {
+    padding: 140px 6% 60px 6%; /* Top spacing adjusted for sleek floating header compatibility */
+  }
+
+  .hero-content-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+  
+  .hero-main-title {
+    font-size: 3.2rem;
+  }
+  
+  .hero-cta-whatsapp {
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .hero-image-backdrop, .hero-showcase-image, .hero-showcase-video {
+    max-width: 310px;
+    height: 400px;
+  }
+
+  .hero-image-backdrop {
+    top: 15px;
+    left: 15px;
+  }
+}

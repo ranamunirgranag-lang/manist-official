@@ -1,0 +1,640 @@
+.showcase-viewport {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 8%;
+  background-color: var(--bg-cream);
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.sc-mini-tag {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.showcase-main-title {
+  font-family: var(--font-serif);
+  font-size: 3.6rem;
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+.showcase-title-line {
+     width: 70px;
+  height: 2px;
+  background-color: var(--accent-gold);
+  margin: 18px auto 0 auto;
+}
+
+.showcase-rows-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Big gap between product blocks for premium feel */
+}
+
+.showcase-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  width: 100%;
+}
+
+.row-normal {
+  flex-direction: row;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.candle-image-panel {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Real Interactive Neon Back Glow Effect Module Layout */
+.candle-image-bg-effect {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  max-width: 360px;
+  height: 450px;
+  border-radius: 24px;
+  z-index: 1;
+  
+  /* Adds premium aura flow transitions when colors shift dynamically */
+  transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ❌ Agar niche .showcase-row:nth-child(even) .candle-image-bg-effect ka override likha hua hai background color ka, toh use CSS file se mita dena! */
+
+
+
+.candle-image-holder {
+     position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  border: 5px solid #ffffff;
+  z-index: 2;
+}
+
+.candle-main-display-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.candle-image-holder:hover .candle-main-display-pic {
+  transform: scale(1.05);
+}
+
+.candle-info-panel {
+  flex: 1;
+  max-width: 480px;
+}
+
+.candle-row-tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.candle-row-title {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.candle-row-price {
+  font-size: 22px;
+  color: #9C6644;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.candle-row-desc {
+  font-size: 15.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.candle-color-selector-zone {
+    margin-bottom: 30px;
+}
+
+.candle-color-lbl {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.active-color-name {
+  color: #9C6644;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.candle-color-dots-flex {
+  display: flex;
+  gap: 12px;
+}
+
+.candle-color-dot-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.candle-color-dot-btn:hover {
+  transform: scale(1.15);
+}
+
+.dot-active {
+  border-color: var(--text-dark);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px #ffffff inset, 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.candle-row-wa-btn {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.candle-row-wa-btn:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive configurations for mobile layouts */
+@media (max-width: 968px) {
+  .showcase-row {
+    flex-direction: column !important; /* 👈 Yahan !important sahi ho gaya */
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .row-reverse {
+    flex-direction: column !important; /* 👈 Mobile par isko bhi seedha column hona chahiye */
+  }
+
+  .candle-image-holder, .candle-image-bg-effect {
+    max-width: 300px;
+    height: 380px;
+  }
+
+  .candle-color-dots-flex {
+    justify-content: center;
+  }
+
+  .showcase-main-title {
+    font-size: 2.5rem;
+  }
+
+  .candle-row-title {
+    font-size: 2rem;
+  }
+}
+/* --- PREMIUM INTERNAL CATALOG SWITCHER BUTTONS ROW --- */
+.catalog-tab-switcher-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 45px auto 0 auto;
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Luxury Round Pill Buttons Configuration */
+.catalog-tab-btn {
+  background: transparent !important;
+  color: #BAAFA8 !important; /* Muted warm grey text for inactive tabs */
+  border: 1.5px solid rgba(230, 184, 138, 0.3) !important; /* Elegant gold thread lines */
+  padding: 12px 32px;
+  border-radius: 50px; /* Capsule pill shape */
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover effect for inactive tabs */
+.catalog-tab-btn:hover {
+  color: #ffffff !important;
+  border-color: #E6B88A !important;
+  transform: translateY(-2px);
+}
+
+/* 🎯 ACTIVE STATE FIX: Button becomes glowing gold and text becomes rich dark espresso */
+.catalog-tab-btn.active {
+  background-color: #E6B88A !important; /* 👈 Rich glowing metallic gold background */
+  color: #120F0D !important;            /* 👈 Dark contrast text so it is perfectly readable! */
+  border-color: #E6B88A !important;
+  font-weight: 800 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(230, 184, 138, 0.25), 0 0 15px rgba(230, 184, 138, 0.15);
+}
+
+/* Mobile Responsive adjustment for small touch layout grids */
+@media (max-width: 640px) {
+  .catalog-tab-switcher-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 5%;
+  }
+  
+  .catalog-tab-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 12.5px;
+  }
+}
+
+/* ==========================================
+   MANIST OFFICIAL - SHOPPING CART SYSTEM
+========================================== */
+
+/* Product Quantity Controls */
+
+.product-quantity-control,
+.cart-quantity-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #171310;
+  border: 1px solid #E6B88A;
+  border-radius: 50px;
+  padding: 7px 15px;
+}
+
+.product-quantity-control button,
+.cart-quantity-control button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #E6B88A;
+  color: #171310;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.product-quantity-control button:hover,
+.cart-quantity-control button:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.product-quantity-control span,
+.cart-quantity-control span {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-added-message {
+  color: #9C6644;
+  font-size: 13px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   CART MAIN SECTION
+========================================== */
+
+.manist-cart-section {
+  max-width: 1000px;
+  margin: 150px auto 40px;
+  padding: 55px 45px;
+  background: #171310;
+  border: 1px solid rgba(230, 184, 138, 0.35);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.manist-cart-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.manist-cart-heading span {
+  display: block;
+  color: #E6B88A;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.manist-cart-heading h2 {
+  color: #FDF0D5;
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.manist-cart-heading p {
+  color: #BBAFA5;
+  font-size: 14px;
+}
+
+
+/* Empty Cart */
+
+.empty-cart-message {
+  text-align: center;
+  padding: 45px 15px;
+  border: 1px dashed rgba(230, 184, 138, 0.4);
+  border-radius: 15px;
+}
+
+.empty-cart-message h3 {
+  color: #E6B88A;
+  font-family: var(--font-serif);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.empty-cart-message p {
+  color: #BBAFA5;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   CART PRODUCTS
+========================================== */
+
+.manist-cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manist-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid rgba(230, 184, 138, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.manist-cart-product-info {
+  flex: 1;
+}
+
+.manist-cart-product-info h3 {
+  color: #FDF0D5;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  margin-bottom: 7px;
+}
+
+.manist-cart-product-info p {
+  color: #BBAFA5;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.manist-cart-item-total {
+  color: #E6B88A;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   ORDER SUMMARY
+========================================== */
+
+.manist-cart-summary {
+  margin-top: 35px;
+  padding: 30px;
+  border: 1px solid rgba(230, 184, 138, 0.35);
+  border-radius: 16px;
+  background: rgba(230, 184, 138, 0.045);
+}
+
+.manist-cart-summary h3 {
+  color: #FDF0D5;
+  font-family: var(--font-serif);
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #C9BDB3;
+  font-size: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-grand-total {
+  color: #E6B88A;
+  font-size: 18px;
+  border-bottom: none;
+  margin-top: 8px;
+}
+
+.cart-payment-info {
+  margin-top: 20px;
+  padding: 18px;
+  background: rgba(230, 184, 138, 0.09);
+  border-radius: 10px;
+}
+
+.cart-payment-info p {
+  color: #FDF0D5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   CUSTOMER CHECKOUT FORM
+========================================== */
+
+.manist-checkout-form {
+  margin-top: 40px;
+}
+
+.manist-checkout-form h3 {
+  color: #FDF0D5;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.manist-checkout-form input,
+.manist-checkout-form textarea {
+  display: block;
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  background: #211C18;
+  color: #ffffff;
+  border: 1px solid rgba(230, 184, 138, 0.3);
+  border-radius: 10px;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.manist-checkout-form input:focus,
+.manist-checkout-form textarea:focus {
+  border-color: #E6B88A;
+  box-shadow: 0 0 12px rgba(230, 184, 138, 0.1);
+}
+
+.manist-checkout-form input::placeholder,
+.manist-checkout-form textarea::placeholder {
+  color: #A99A8D;
+}
+
+.manist-checkout-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.manist-checkout-form .hero-cta-whatsapp {
+  width: 100%;
+  padding: 17px 25px;
+  background: #E6B88A;
+  color: #171310;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.manist-checkout-form .hero-cta-whatsapp:hover {
+  background: #FDF0D5;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(230, 184, 138, 0.2);
+}
+
+.checkout-note {
+  color: #A99A8D;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .manist-cart-section {
+    margin: 90px auto 20px;
+    padding: 35px 18px;
+    border-radius: 16px;
+  }
+
+  .manist-cart-heading h2 {
+    font-size: 2rem;
+  }
+
+  .manist-cart-item {
+    flex-wrap: wrap;
+    padding: 17px;
+    gap: 13px;
+  }
+
+  .manist-cart-product-info {
+    flex-basis: 100%;
+  }
+
+  .manist-cart-item-total {
+    margin-left: auto;
+  }
+
+  .manist-cart-summary {
+    padding: 20px 15px;
+  }
+
+  .cart-summary-row {
+    font-size: 13px;
+  }
+
+  .cart-grand-total {
+    font-size: 16px;
+  }
+
+  .product-quantity-control {
+    margin: 5px auto;
+  }
+
+  .manist-checkout-form h3 {
+    font-size: 21px;
+  }
+
+}
