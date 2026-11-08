@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 /* Real React Icons Import modules */
 import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
-import '../style.css/footer.css'; 
+import '../style.css/Footer.css'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
