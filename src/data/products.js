@@ -52,8 +52,8 @@ export const creamsData = [
     tagline: "Beauty Begins with Self-Care.",
     price: "Rs. 2599",
     description: "Give your skin a touch of luxury with Tyba Madicatid Cream. A special addition to your daily beauty and skincare routine.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
+    image: "/medical-new.jpeg",
+    fallbackImage: "/medical-new.jpeg"
   },
   {
     id: 2,
@@ -61,8 +61,8 @@ export const creamsData = [
     tagline: "Let Your Natural Beauty Shine.",
     price: "Rs. 1499",
     description: "Make your everyday skincare routine special with Tyba Beauty Cream. Enjoy a simple and refreshing beauty-care experience.",
-    image: "/cream2.jpeg",
-    fallbackImage: "/cream2.jpeg"
+    image: "/beauty-new.jpeg",
+    fallbackImage: "/beauty-new.jpeg"
   },
   {
     id: 3,
@@ -70,8 +70,8 @@ export const creamsData = [
     tagline: "Love Your Skin, Embrace Your Beauty.",
     price: "Rs. 2199",
     description: "Specially presented for your skincare collection, Tyba Freckles Cream adds a dedicated touch to your daily beauty-care routine.",
-    image: "/cream3.jpeg",
-    fallbackImage: "/cream3.jpeg"
+    image: "/dark-new.jpeg",
+    fallbackImage: "/dark-new.jpeg"
   },
   {
     id: 4,
@@ -79,8 +79,8 @@ export const creamsData = [
     tagline: "Every Bride Deserves a Special Glow.",
     price: "Rs. 1499",
     description: "Make your pre-bridal beauty routine more special with Tyba Bridal Cream. A lovely choice for your bridal skincare collection.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
+    image: "/bridal-new.jpeg",
+    fallbackImage: "/bridal-new.jpeg"
   },
 
  {
@@ -89,17 +89,8 @@ export const creamsData = [
     tagline: "Beautiful Care from Head to Toe.",
     price: "Rs. 2599",
     description: "Give your hands and feet the care they deserve. Tyba Hand & Foot Cream is a lovely addition to your everyday self-care routine.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
-  },
-  {
-    id: 6,
-    name: "Facial jaar",
-    tagline: "Refresh Your Beauty Routine.",
-    price: "Rs. 799",
-    description: "Add a special touch to your skincare collection with Tyba Facial. Enjoy a refreshing self-care experience at home.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
+    image: "/rice-new.jpeg",
+    fallbackImage: "/rice-new.jpeg"
   },
   {
     id: 7,
@@ -107,17 +98,9 @@ export const creamsData = [
     tagline: "Freshness Begins with Every Wash.",
     price: "Rs. 799",
     description: "Start your skincare routine with Tyba Face Wash. Make daily cleansing a refreshing part of your beauty care.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
+    image: "/facewash-new.jpeg",
+    fallbackImage: "/facewash-new.jpeg"
   },
-   {
-    id: 8,
-    name: "Skin polish",
-    tagline: "Your Skin, Your Beauty, Your Confidence.",
-    price: "Rs. 799",
-    description: "Give your skincare routine a luxurious touch with Tyba Skin Polish. A special addition to your regular beauty-care collection.",
-    image: "/cream1.jpeg",
-    fallbackImage: "/cream1.jpeg"
-  }
+
 
 ];
