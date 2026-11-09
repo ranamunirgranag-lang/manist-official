@@ -134,3 +134,28 @@
     gap: 40px;
   }
 }
+/* Made By Faqeeha - Signature */
+.made-by-faqeeha {
+  margin-top: 8px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  font-weight: 500;
+}
+
+.made-by-heart {
+  color: #E6B88A;
+  font-size: 14px;
+  margin: 0 3px;
+}
+
+.made-by-name {
+  background: linear-gradient(90deg, #E6B88A, #fff2d9, #E6B88A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
