@@ -89,7 +89,7 @@ const Footer = () => {
             </a>
             
             <a 
-              href="tiktok.com/@manistorganics" 
+              href="https://www.tiktok.com/@manist_official" 
               target="_blank" 
               rel="noreferrer" 
               className="social-icon-circle-link" 
