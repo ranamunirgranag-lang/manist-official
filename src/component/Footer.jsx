@@ -137,10 +137,13 @@ const Footer = () => {
 
       </div>
 
-      {/* BOTTOM BASEBAR */}
-      <div className="footer-bottom-copyright-strip ft-fade-item">
-        <p>&copy; 2026 MANIST OFFICIAL. Handcrafted with Absolute Luxury. Powered by Organic Excellence.</p>
-      </div>
+    {/* BOTTOM BASEBAR */}
+<div className="footer-bottom-copyright-strip ft-fade-item">
+  <p>&copy; 2026 MANIST OFFICIAL. Handcrafted with Absolute Luxury. Powered by Organic Excellence.</p>
+  <p className="made-by-faqeeha">
+    Made with <span className="made-by-heart">♥</span> by <span className="made-by-name">Faqeeha Developer</span>
+  </p>
+</div>
     </footer>
   );
 };
